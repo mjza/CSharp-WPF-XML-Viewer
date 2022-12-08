@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XMLViewerApplication", "XMLViewerApplication\XMLViewerApplication.csproj", "{72633DD9-63E7-4C1E-BB04-7EA0FECE34BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLViewer", "XMLViewer\XMLViewer.csproj", "{5359C807-DC25-40D2-927D-85182AD23299}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72633DD9-63E7-4C1E-BB04-7EA0FECE34BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72633DD9-63E7-4C1E-BB04-7EA0FECE34BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72633DD9-63E7-4C1E-BB04-7EA0FECE34BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72633DD9-63E7-4C1E-BB04-7EA0FECE34BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5359C807-DC25-40D2-927D-85182AD23299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5359C807-DC25-40D2-927D-85182AD23299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5359C807-DC25-40D2-927D-85182AD23299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5359C807-DC25-40D2-927D-85182AD23299}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD804C72-D14D-459C-9FD5-0D26B15E2B70}
+	EndGlobalSection
+EndGlobal
