@@ -3,10 +3,32 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:XMLViewerApplication"
+        xmlns:XMLViewer="clr-namespace:XMLViewer;assembly=XMLViewer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="XML Viewer" Height="450" Width="800">
+    <Grid Margin="10, 10, 10, 10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="5" />
+            </Grid.ColumnDefinitions>
+
+            <TextBox Name="textBoxFilePath" IsReadOnly="True"
+                     Grid.Column="0" HorizontalAlignment="Stretch" />
+            <Button Margin="3, 0, 0, 0" Content="Browse..." 
+                    Click="BrowseXmlFile" Grid.Column="1"/>
+            <Button Margin="3, 0, 0, 0" Content="Clear" 
+                    Click="ClearXmlFile" Grid.Column="2"/>
+        </Grid>
+
+        <XMLViewer:Viewer x:Name="vXMLViwer" Grid.Row="2" />
     </Grid>
 </Window>
