@@ -10,11 +10,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Images\Icon1.ico" />
+    <None Remove="images\CloseDocument.png" />
+    <None Remove="images\Exit.png" />
+    <None Remove="images\OpenFile.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\Icon1.ico" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\XMLViewer\XMLViewer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\CloseDocument.png" />
+    <Resource Include="images\Exit.png" />
+    <Resource Include="images\OpenFile.png" />
   </ItemGroup>
 
   <ItemGroup>

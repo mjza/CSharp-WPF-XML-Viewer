@@ -16,10 +16,22 @@
 
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File">
-                <MenuItem Header="_Open" Click="MenuOpen_Click"/>
-                <MenuItem Header="_Close" Click="MenuClose_Click"/>
+                <MenuItem Header="_Open" Click="MenuOpen_Click">
+                    <MenuItem.Icon>
+                        <Image Source="images/OpenFile.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="_Close" Click="MenuClose_Click">
+                    <MenuItem.Icon>
+                        <Image Source="images/CloseDocument.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
                 <Separator />
-                <MenuItem Header="_Exit" Click="MenuExit_Click"/>
+                <MenuItem Header="_Exit" Click="MenuExit_Click">
+                    <MenuItem.Icon>
+                        <Image Source="images/Exit.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
         </Menu>
 
