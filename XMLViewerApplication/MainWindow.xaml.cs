@@ -21,12 +21,15 @@ namespace XMLViewerApplication
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly String _appTitle = "XML Viewer";
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = _appTitle;
         }
 
-        private void BrowseXmlFile(object sender, RoutedEventArgs e)
+        
+        private void MenuOpen_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
             openFileDialog.CheckFileExists = true;
@@ -45,15 +48,21 @@ namespace XMLViewerApplication
                 MessageBox.Show("The XML file is invalid");
                 return;
             }
-
-            textBoxFilePath.Text = openFileDialog.FileName;
+            this.Title = _appTitle + openFileDialog.SafeFileName;
             vXMLViwer.XmlDocument = XMLdoc;
         }
 
-        private void ClearXmlFile(object sender, RoutedEventArgs e)
+        private void MenuClose_Click(object sender, RoutedEventArgs e)
         {
-            textBoxFilePath.Text = string.Empty;
+            this.Title = _appTitle;
+            textBlockFilePath.Text = string.Empty;
             vXMLViwer.XmlDocument = null;
+        }
+
+        private void MenuExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.MenuClose_Click(sender,e);
+            Application.Current.Shutdown();
         }
     }
 }

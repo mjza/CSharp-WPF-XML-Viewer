@@ -85,13 +85,13 @@
     </UserControl.Resources>
 
     <Grid>
-        <TreeView Grid.Row="2" Grid.ColumnSpan="2" Name="xmlTree"
-                  ItemTemplate="{StaticResource treeViewTemplate}" TreeViewItem.Expanded="TreeNodeExpanded">
+        <TreeView Name="xmlTree" VerticalAlignment="Stretch"
+                    ItemTemplate="{StaticResource treeViewTemplate}" TreeViewItem.Expanded="TreeNodeExpanded">
             <TreeView.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
-                      Color="LightBlue" />
+                        Color="LightBlue" />
                 <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}"
-                      Color="Black" />
+                        Color="Black" />
             </TreeView.Resources>
         </TreeView>
     </Grid>

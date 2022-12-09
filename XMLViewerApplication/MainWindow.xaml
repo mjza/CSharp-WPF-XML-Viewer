@@ -5,30 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:XMLViewer="clr-namespace:XMLViewer;assembly=XMLViewer"
         mc:Ignorable="d"
-        Title="XML Viewer" Height="450" Width="800">
-    <Grid Margin="10, 10, 10, 10">
+        Height="600" Width="800">
+
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="5"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open" Click="MenuOpen_Click"/>
+                <MenuItem Header="_Close" Click="MenuClose_Click"/>
+                <Separator />
+                <MenuItem Header="_Exit" Click="MenuExit_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <XMLViewer:Viewer x:Name="vXMLViwer" Grid.Row="1"/>
+
+        <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="100" />
-                <ColumnDefinition Width="100" />
-                <ColumnDefinition Width="5" />
             </Grid.ColumnDefinitions>
-
-            <TextBox Name="textBoxFilePath" IsReadOnly="True"
-                     Grid.Column="0" HorizontalAlignment="Stretch" />
-            <Button Margin="3, 0, 0, 0" Content="Browse..." 
-                    Click="BrowseXmlFile" Grid.Column="1"/>
-            <Button Margin="3, 0, 0, 0" Content="Clear" 
-                    Click="ClearXmlFile" Grid.Column="2"/>
+            <StatusBar >
+                <StatusBarItem>
+                    <TextBlock Name="textBlockFilePath" Grid.Column="0" HorizontalAlignment="Stretch"/>
+                </StatusBarItem>
+            </StatusBar>
         </Grid>
-
-        <XMLViewer:Viewer x:Name="vXMLViwer" Grid.Row="2" />
     </Grid>
 </Window>
