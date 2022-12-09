@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Xml;
+using XMLViewer;
 
 namespace XMLViewerApplication
 {
@@ -26,6 +16,7 @@ namespace XMLViewerApplication
         {
             InitializeComponent();
             this.Title = _appTitle;
+            vXMLViwer.CalculateSelectedNodePath = true;
         }
 
         
@@ -63,6 +54,15 @@ namespace XMLViewerApplication
         {
             this.MenuClose_Click(sender,e);
             Application.Current.Shutdown();
+        }
+
+        private void XMLViwer_SelectedItemChanged(object sender, EventArgs e)
+        {
+            SelectedItemChangedEventArgs? selectedItemChangedEventArgs = e as SelectedItemChangedEventArgs;
+            if (selectedItemChangedEventArgs != null)
+            {
+                textBlockFilePath.Text = "Path: " + selectedItemChangedEventArgs.SelectedNodePath;
+            }            
         }
     }
 }

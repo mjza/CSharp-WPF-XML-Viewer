@@ -86,7 +86,7 @@
 
     <Grid>
         <TreeView Name="xmlTree" VerticalAlignment="Stretch"
-                    ItemTemplate="{StaticResource treeViewTemplate}" TreeViewItem.Expanded="TreeNodeExpanded">
+                    ItemTemplate="{StaticResource treeViewTemplate}" TreeViewItem.Expanded="TreeNodeExpanded" TreeView.SelectedItemChanged="TreeSelectedItemChanged">
             <TreeView.Resources>
                 <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}"
                         Color="LightBlue" />

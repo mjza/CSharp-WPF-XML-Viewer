@@ -11,7 +11,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="25"/>
         </Grid.RowDefinitions>
 
         <Menu DockPanel.Dock="Top">
@@ -23,7 +23,7 @@
             </MenuItem>
         </Menu>
 
-        <XMLViewer:Viewer x:Name="vXMLViwer" Grid.Row="1"/>
+        <XMLViewer:Viewer x:Name="vXMLViwer" Grid.Row="1" SelectedItemChanged="XMLViwer_SelectedItemChanged"/>
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -31,7 +31,7 @@
             </Grid.ColumnDefinitions>
             <StatusBar >
                 <StatusBarItem>
-                    <TextBlock Name="textBlockFilePath" Grid.Column="0" HorizontalAlignment="Stretch"/>
+                    <TextBlock Name="textBlockFilePath" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Center" Padding="5,0,5,3"/>
                 </StatusBarItem>
             </StatusBar>
         </Grid>
